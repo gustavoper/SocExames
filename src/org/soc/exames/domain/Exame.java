@@ -1,106 +1,99 @@
 package org.soc.exames.domain;
 
+import org.soc.exames.domain.*;
+
+
 /**
- * 
- * Entidade "Exame" 
- * 
+ *
+ * Entidade "Exame"
+ *
  * @author Gustavo Pereira <gustavoper@gmail.com>
  *
  */
 public class Exame {
 
-	
-	private int id;
-	
-	/**
-	 * Nome do Paciente
-	 */
-	private String nomePaciente;
-	
-	
-	/**
-	 * Nome do Médico
-	 */
-	private String nomeMedico;
-	
-	/**
-	 * E-mail do Paciente
-	 */
-	private String emailPaciente;
-	
-	/**
-	 * UID do Exame (Para WS)
-	 */
-	private String uidExame;
-	
-	/**
-	 * Observação - Exame
-	 */
-	private String observacaoExame;
 
-	public int getId() {
-		return id;
+    private int idExame;
+    
+	private Paciente paciente;
+
+    private Medico Medico;
+
+    private TipoExame TipoExame;
+
+    private String emailPaciente;
+
+    private String observacaoExame;
+
+    private String idExternoExame;
+
+    
+
+	public int getIdExame() {
+		return idExame;
 	}
 
-	
-	public void setId(int id) {
-		this.id = id;
+	public void setIdExame(int idExame) {
+		this.idExame = idExame;
 	}
-	
-	public String getNomePaciente()
-	{
-		return nomePaciente;
+
+	public Paciente getPaciente() {
+		return this.paciente;
 	}
-	
-	
-	public void setNomePaciente(String nomePaciente)
-	{
-		this.nomePaciente = nomePaciente;
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
 	}
-	
-	public String getNomeMedico()
-	{
-		return nomeMedico;
+
+	public Medico getMedico() {
+		return this.Medico;
 	}
-	
-	
-	public void setNomeMedico(String nomeMedico)
-	{
-		this.nomeMedico = nomeMedico;
+
+	public void setMedico(Medico medico) {
+		this.Medico = medico;
 	}
-	
-	
-	public String getEmailPaciente()
-	{
+
+	public TipoExame getTipoExame() {
+		return this.TipoExame;
+	}
+
+	public void setTipoExame(TipoExame tipoExame) {
+		this.TipoExame = tipoExame;
+	}
+
+	public String getEmailPaciente() {
 		return emailPaciente;
 	}
-	
-	public void setEmailPaciente(String emailPaciente)
-	{
+
+	public void setEmailPaciente(String emailPaciente) {
 		this.emailPaciente = emailPaciente;
 	}
-	
-	
-	public String getUidExame() {
-		return uidExame;
-	}
 
-	public void setUidExame(String uidExame) {
-		this.uidExame = uidExame;
-	}
-
-	
-	public String getObservacaoExame()
-	{
+	public String getObservacaoExame() {
 		return observacaoExame;
 	}
-	
-	public void setObservacaoExame(String observacaoExame)
-	{
+
+	public void setObservacaoExame(String observacaoExame) {
 		this.observacaoExame = observacaoExame;
 	}
-	
-	
-	
-	
+
+	/**
+	 * ID Externo do Exame (WS)
+	 * 
+	 * @return
+	 */
+	public String getIdExternoExame() {
+		return idExternoExame;
+	}
+
+	/**
+	 * ID Externo do Exame (WS)
+	 * 
+	 * @param idExternoExame
+	 */
+	public void setIdExternoExame(String idExternoExame) {
+		this.idExternoExame = idExternoExame;
+		
+	}
+
 }
