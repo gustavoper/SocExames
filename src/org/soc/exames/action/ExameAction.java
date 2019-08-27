@@ -82,6 +82,7 @@ public class ExameAction
 			while (recordset.next()) {
 				Exame exame = new Exame();
 				exame.setIdExame(recordset.getInt("id"));
+				
 				//paciente.setNome(rs.getString("nome"));
 				//paciente.setEmail(rs.getString("email"));
 				//paciente.setTelefone(rs.getString("telefone"));
