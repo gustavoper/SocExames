@@ -1,10 +1,10 @@
-package org.soc.exames.action;
+package org.soc.exames.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import org.soc.exames.domain.Paciente;
 
-public class PacienteAction {
+public class PacienteDao {
 
 	
 	

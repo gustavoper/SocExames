@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-"http://struts.apache.org/dtds/struts-2.0.dtd">
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+
+ <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+ <constant name="struts.devMode" value="false" />
 	<package name="default" extends="struts-default">
-		<action name="novoExame" class="org.soc.exames.action.NovoExameAction">
-			<result name="REGISTER">Exames.jsp</result>
+		<action name="relatorio" method="getAll" class="org.soc.exames.action.ExameAction">
+			<result name="relatorio">Exames.jsp</result>
 		</action>
 		<!--  <action name="atualizarExame" class="org.soc.exames.action.UpdateExameAction">
 			<result name="UPDATE">/update.jsp</result>

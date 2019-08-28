@@ -1,23 +1,23 @@
-package org.soc.exames.action;
+package org.soc.exames.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import org.soc.exames.domain.Medico;
+import org.soc.exames.domain.TipoExame;
 
-public class MedicoAction {
+public class tipoExameDao {
 
 	
 	
-	public Medico getMedico(int idMedico)
+	public TipoExame getTipoExame(int idMedico)
 	{
 		try 
 		{
-			Medico medico = new Medico();
+			TipoExame tipoexame = new TipoExame();
 			String sqlSelect = " select * from medico where id = ?";
 			PreparedStatement selectStmt = ConnDb.getConnection().prepareStatement(sqlSelect);
 			selectStmt.setInt(1, idMedico);
 			selectStmt.executeQuery();
-			return medico;
+			return tipoexame;
 		}catch (SQLException e)
 		{
 			e.getStackTrace();

@@ -4,7 +4,7 @@
  * @author Gustavo Pereira <gustavoper@gmail.com>
  * @since 2019-08-25
  */
-package org.soc.exames.action;
+package org.soc.exames.dao;
 
 
 import java.sql.Connection;
@@ -24,9 +24,9 @@ public class ConnDb {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			return DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:3306/websparrow", 
+					"jdbc:mysql://10.0.0.6:3306/exames", 
 					"root", 
-					""
+					"123456"
 			);
 		} catch (Exception e) {
 			e.printStackTrace();
